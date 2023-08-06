@@ -22,8 +22,8 @@ $`\frac{dCost}{dW} = 2 \times (A1 - \hat{A1}) \times A0`$ <br />
 $`\frac{dCost}{dB} = 2 \times (A1 - \hat{A1}) \times \frac{dA1}{dB}`$ <br />
 $`\frac{dCost}{dB} = 2 \times (A1 - \hat{A1})`$ <br />
 so the update rules would change to $`W^T = W^T + r \times (A1 - \hat{A1}) \times A0`$ and $`B = B + r \times (A1 - \hat{A1})`$ <br />
-notice that like A1,Cost and $`\hat{A1}`$ also are $`10 \times 1`$ vectors, <br />
-and all elements of $`\hat{A1}`$ are zero except the element with label index which is one. <br />
+notice that like A1,Cost and $`\hat{A1}`$ also are $`10 \times 1`$ vectors,
+and all elements of $`\hat{A1}`$ are zero except the element with label index which is one.
 so we can write the train our model by iterating over training set,
 here it is the code:
 ```
@@ -48,8 +48,8 @@ here it is the code:
 ### testing
 this model have been tested over 10000 images and it predicted the right label in more than 5000 cases,
 which means $`accuracy = 50%`$ (not bad for such dumb network)
+- note that you might get different accuracy due to local optima problem <br />
 ![Screenshot from 2023-08-07 00-44-43](https://github.com/Mehrdadghassabi/handwritten_digit_recognition_from_scratch/assets/53050138/eb5aead0-28f7-4003-94ad-c9795cdd58de)
-- note that you might get different accuracy due to local optima problem
 
 ### depiction
 
