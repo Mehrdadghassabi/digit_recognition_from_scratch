@@ -7,14 +7,15 @@ in this repository i tried to solve handwritten digits recognition problem with 
 
 ## dumbest network
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mehrdadghassabi/handwritten_digit_recognition_from_scratch/blob/main/dumbest%D9%80network.ipynb) <br />
-as mnist dataset pictures are $`28 \times 28`$ the input layer would have 784 nodes and the output layer would have 10 nodes each one corresponds to probablity of being a digit,
 the dumbest network for such a task is fully connecting the input and the output layer without any hidden layer.<br />
+as mnist dataset pictures are $`28 \times 28`$ the input layer A0 would have 784 nodes and the output layer A1 would have 10 nodes each one correspond to probablity of being a digit,
+notice that the predicted label would be equal to argmax(A1).<br />
 ### training
 as there is no hidden layer in this network only two vector would determine the answer a $`784 \times 10`$ weight vector and a $`10 \times 1`$ bias vector,
-the output would be $`A1 = \sigms{W^T \times A0 + B}`$ , 
+the output would be $`A1 = \sigma{W^T \times A0 + B}`$ , 
 where W is weight vector B is bias vector A0 is flatten version of the grey scale input image (a $`784 \times 1`$ vector). <br />
 according to gradient descent algorithm first of all W and B should be initialized randomly and get updated to minimize the cost function,
-where $`Cost = (y - \hat{y})^2`$ and update rules are $`W = W + \frac{dCost}{dW}`$ and $`B = B + \frac{dCost}{dB}`$
-
-
+where $`Cost = (A1 - \hat{A1})^2`$ and update rules are $`W = W + \frac{dCost}{dW}`$ and $`B = B + \frac{dCost}{dB}`$
+like A1,Cost and $`\hat{A1}`$ also are $`10 \times 1`$ vectors, <br />
+notice that all elements of $`\hat{A1}`$ are zero except the element with label index which is one.
 ![diag](https://github.com/Mehrdadghassabi/handwritten_digit_recognition_from_scratch/assets/53050138/fb1743a7-9bf5-49c9-b61e-896486f696b2)
