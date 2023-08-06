@@ -15,7 +15,7 @@ notice that the predicted label would be equal to argmax(A1).<br />
 as there is no hidden layer in this network only two vector would determine the predicted label, a $`784 \times 10`$ weight vector(W) and a $`10 \times 1`$ bias vector(B),
 the output would be $`A1 = \sigma{(W^T \times A0 + B)}`$ <br />
 according to gradient descent algorithm first of all W and B should be initialized randomly and get updated to minimize the cost function,
-where $`Cost = (A1 - \hat{A1})^2`$ and update rules are $`W^T = W^T + r \times \frac{d}{dW}Cost`$ and $`B = B + r \times \frac{d}{dB}Cost`$ <br />
+where $`Cost = (A1 - \hat{A1})^2`$ and update rules are $`W^T = W^T + r \times \frac{dCost}{dW}`$ and $`B = B + r \times \frac{dCost}{dB}`$ <br />
 $` Cost = (A1 - \hat{A1})^2 `$ <br />
 $`\frac{dCost}{dW} = 2 \times (A1 - \hat{A1}) \times \frac{dA1}{dW}`$ <br />
 $`\frac{dCost}{dW} = 2 \times (A1 - \hat{A1}) \times A0`$ <br />
@@ -46,4 +46,11 @@ here it is the code:
     return WT,B
 ```
 ### testing
+this model have been tested over 10000 images and it predicted the right label in more than 5000 cases,
+which means $`accuracy = 50%`$ (not bad for such dumb network)
+![Screenshot from 2023-08-07 00-44-43](https://github.com/Mehrdadghassabi/handwritten_digit_recognition_from_scratch/assets/53050138/eb5aead0-28f7-4003-94ad-c9795cdd58de)
+- note that you might get different accuracy due to local optima problem
+
+### depiction
+
 ![diag](https://github.com/Mehrdadghassabi/handwritten_digit_recognition_from_scratch/assets/53050138/fb1743a7-9bf5-49c9-b61e-896486f696b2)
