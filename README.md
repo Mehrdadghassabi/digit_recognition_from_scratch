@@ -16,12 +16,11 @@ as there is no hidden layer in this network only two vector would determine the 
 the output would be $`A1 = \sigma{(W^T \times A0 + B)}`$ <br />
 according to gradient descent algorithm first of all W and B should be initialized randomly and get updated to minimize the cost function,
 where $`Cost = (A1 - \hat{A1})^2`$ and update rules are $`W^T = W^T + r \times \frac{d}{dW}Cost`$ and $`B = B + r \times \frac{d}{dB}Cost`$ <br />
-$` Cost = (A1 - \hat{A1})^2 \\
-\frac{dCost}{dW} = 2 \times (A1 - \hat{A1}) \times \frac{dA1}{dW} \\
-\frac{dCost}{dW} = 2 \times (A1 - \hat{A1}) \times A0`$ <br />
-$` Cost = (A1 - \hat{A1})^2 \\
-\frac{dCost}{dB} = 2 \times (A1 - \hat{A1}) \times \frac{dA1}{dB} \\
-\frac{dCost}{dB} = 2 \times (A1 - \hat{A1}) `$
+$` Cost = (A1 - \hat{A1})^2 `$ <br />
+$`\frac{dCost}{dW} = 2 \times (A1 - \hat{A1}) \times \frac{dA1}{dW}`$ <br />
+$`\frac{dCost}{dW} = 2 \times (A1 - \hat{A1}) \times A0`$ <br />
+$`\frac{dCost}{dB} = 2 \times (A1 - \hat{A1}) \times \frac{dA1}{dB}`$ <br />
+$`\frac{dCost}{dB} = 2 \times (A1 - \hat{A1})`$ <br />
 so the update rules would change to $`W^T = W^T + r \times (A1 - \hat{A1}) \times A0`$ and $`B = B + r \times (A1 - \hat{A1})`$ <br />
 notice that like A1,Cost and $`\hat{A1}`$ also are $`10 \times 1`$ vectors, <br />
 and all elements of $`\hat{A1}`$ are zero except the element with label index which is one. <br />
