@@ -6,8 +6,8 @@ in this repository i tried to solve handwritten digits recognition problem with 
 - gradient descent and backpropagation method have been used
 
 ## dumbest network
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mehrdadghassabi/handwritten_digit_recognition_from_scratch/blob/main/dumbest%D9%80network.ipynb) <br />
-as mnist dataset pictures are $`28 \times 28`$ the input layer would have 784 nodes and the output layer would have 10 nodes each one corresponds to probablity of being a digit. <br />
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mehrdadghassabi/Gracc/blob/master/Gracc.ipynb) <br />
+as mnist dataset pictures are $`28 \times 28`$ the input layer would have 784 nodes and the output layer would have 10 nodes each one corresponds to probablity of being a digit,
 the dumbest network for such a task is fully connecting the input and the output layer without any hidden layer.<br />
 ### training
 as there is no hidden layer in this network only two vector would determine the answer a $`784 \times 10`$ weight vector and a $`10 \times 1`$ bias vector,
