@@ -46,11 +46,13 @@ here it is the code:
 ```
 ### testing
 this model have been tested over 10000 images and it predicted the right label in more than 5000 cases,
-which means $`accuracy = 50%`$ (not bad for such dumb network) <br />
+which means accuracy is equal to 50% (not bad for such a network) <br />
 ![Screenshot from 2023-08-07 00-44-43](https://github.com/Mehrdadghassabi/handwritten_digit_recognition_from_scratch/assets/53050138/eb5aead0-28f7-4003-94ad-c9795cdd58de)
 
 ### Run it yourself
 - run it yourself but note that you might get different accuracy due to local optima problem </br>
+
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mehrdadghassabi/handwritten_digit_recognition_from_scratch/blob/main/dumbest%D9%80network.ipynb)
 
 
