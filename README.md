@@ -20,27 +20,26 @@ $`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times \frac{dA_1}{dW}`$ <br />
 $`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times A_0`$ <br />
 $`\frac{dCost}{dB} = 2 \times (A_1 - \hat{A_1}) \times \frac{dA_1}{dB}`$ <br />
 $`\frac{dCost}{dB} = 2 \times (A_1 - \hat{A_1})`$ <br />
-so the update rules would change to $`W^T = W^T + r \times (A_1 - \hat{A_1}) \times A0`$ and $`B = B + r \times (A_1 - \hat{A_1})`$ <br />
-notice that like $`{A_1}`$,Cost and $`\hat{A_1}`$ also are $`10 \times 1`$ vectors,
+so the update rules would change to $`W^T = W^T + r \times (A_1 - \hat{A_1}) \times A_0`$ and $`B = B + r \times (A_1 - \hat{A_1})`$, <br />
+notice that like $`{A_1}`$ Cost and $`\hat{A_1}`$ also are $`10 \times 1`$ vectors,
 and all elements of $`\hat{A_1}`$ are zero except the element with label index which is one.
 so we can write the train our model by iterating over training set,
 here it is the code:
 ```
-    def train(training_size,WT,B):
-    assert training_size <= 6000
-    for i in range(training_size):
+def train(train_X,train_y,WT,B):
+    for i in range(len(train_X)):
         # print("episode number: "+ str(i))
         A0 = train_X[i].flatten().reshape((-1, 1))
         A0 = A0 / 255
         A1 = np.vectorize(sigmoid)(np.matmul(WT,A0) + B)
-        yhat =  np.zeros((10, 1))
-        yhat[train_y[i]][0] = 1
-        cost = A1-yhat
+        A1hat =  np.zeros((10, 1))
+        A1hat[train_y[i]][0] = 1
+        cost = A1-A1hat
         activation_func_deriv = A1 - A1**2
         r = 0.05
         for j in range(10):
             for k in range(784):
-                WT[j][k] = WT[j][k] - r * (A0[k]) * (activation_func_deriv [j]) * (cost[j])
+                WT[j][k] = WT[j][k] - r * (A0[k]) * (activation_func_deriv[j]) * (cost[j])
             B[j] = B[j] - r * (activation_func_deriv [j]) * (cost[j])
     return WT,B
 ```
