@@ -14,13 +14,13 @@ notice that the predicted label would be equal to argmax(A1).<br />
 as there is no hidden layer in this network only two vector would determine the predicted label, a $`784 \times 10`$ weight vector(W) and a $`10 \times 1`$ bias vector(B),
 the output would be $`A_1 = \sigma{(W^T \times A_0 + B)}`$ <br />
 according to gradient descent algorithm first of all W and B should be initialized randomly and get updated to minimize the cost function,
-where $`Cost = (A_1 - \hat{A_1})^2`$ and update rules are $`W^T = W^T + r \times \frac{dCost}{dW}`$ and $`B = B + r \times \frac{dCost}{dB}`$ so we would have <br />
+where $`Cost = (A_1 - \hat{A_1})^2`$ and update rules are $`W^T = W^T + r \times \frac{dCost}{dW}`$ and $`B = B + r \times \frac{dCost}{dB}`$, so we would have: <br />
 $` Cost = (A_1 - \hat{A_1})^2 `$ <br />
 $`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times \frac{dA_1}{dW}`$ <br />
 $`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times A_0`$ <br />
 $`\frac{dCost}{dB} = 2 \times (A_1 - \hat{A_1}) \times \frac{dA_1}{dB}`$ <br />
 $`\frac{dCost}{dB} = 2 \times (A_1 - \hat{A_1})`$ <br />
-so the update rules would change to $`W^T = W^T + r \times (A1 - \hat{A1}) \times A0`$ and $`B = B + r \times (A_1 - \hat{A_1})`$ <br />
+so the update rules would change to $`W^T = W^T + r \times (A_1 - \hat{A_1}) \times A0`$ and $`B = B + r \times (A_1 - \hat{A_1})`$ <br />
 notice that like $`{A_1}`$,Cost and $`\hat{A_1}`$ also are $`10 \times 1`$ vectors,
 and all elements of $`\hat{A_1}`$ are zero except the element with label index which is one.
 so we can write the train our model by iterating over training set,
