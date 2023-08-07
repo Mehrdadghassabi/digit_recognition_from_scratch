@@ -45,7 +45,7 @@ def train(train_X,train_y,WT,B):
 ```
 ### testing
 this model have been tested over 10000 images and it predicted the right label in more than 5000 cases,
-which means accuracy is equal to 50% (not bad for such a network) <br />
+which means accuracy is equal to 80% (not bad for such a network) <br />
 ![Screenshot from 2023-08-08 00-35-01](https://github.com/Mehrdadghassabi/handwritten_digit_recognition_from_scratch/assets/53050138/345c590e-ed1e-4358-becd-d4c8f2b245ed)
 
 
