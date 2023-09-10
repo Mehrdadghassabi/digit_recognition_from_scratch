@@ -17,7 +17,7 @@ according to gradient descent algorithm first of all W and B should be initializ
 where $`Cost = (A_1 - \hat{A_1})^2`$ and update rules are $`W^T = W^T + r \times \frac{dCost}{dW}`$ and $`B = B + r \times \frac{dCost}{dB}`$, so we would have: <br />
 $` Cost = (A_1 - \hat{A_1})^2 `$ <br />
 $`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times \frac{dA_1}{dW}`$ <br />
-$`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times A_0 \times \prim{\sigma{(W^T \times A_0 + B)}}`$ <br />
+$`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times A_0 \times \prime{\sigma{(W^T \times A_0 + B)}}`$ <br />
 $`\frac{dCost}{dB} = 2 \times (A_1 - \hat{A_1}) \times \frac{dA_1}{dB}`$ <br />
 $`\frac{dCost}{dB} = 2 \times (A_1 - \hat{A_1})`$ <br />
 so the update rules would change to $`W^T = W^T + r \times (A_1 - \hat{A_1}) \times A_0`$ and $`B = B + r \times (A_1 - \hat{A_1})`$, <br />
