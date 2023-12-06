@@ -14,7 +14,7 @@ notice that the predicted label would be equal to $`argmax(A_1)`$.<br />
 as there is no hidden layer in this network only two vector would determine the predicted label, a $`784 \times 10`$ weight vector(W) and a $`10 \times 1`$ bias vector(B),
 the output would be $`A_1 = \sigma{(W^T \times A_0 + B)}`$ <br />
 according to gradient descent algorithm first of all W and B should be initialized randomly and get updated to minimize the cost function,
-where $`Cost = (A_1 - \hat{A_1})^2`$ and update rules are $`W^T = W^T + r \times \frac{dCost}{dW}`$ and $`B = B + r \times \frac{dCost}{dB}`$, so we would have: <br />
+where $`Cost = (A_1 - \hat{A_1})^2`$ and update rules are $`W^T = W^T - r \times \frac{dCost}{dW}`$ and $`B = B - r \times \frac{dCost}{dB}`$, so we would have: <br />
 $` Cost = (A_1 - \hat{A_1})^2 `$ <br />
 $`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times \frac{dA_1}{dW}`$ <br />
 $`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times A_0 \times \sigma ^ \prime{(W^T \times A_0 + B)}`$ <br />
