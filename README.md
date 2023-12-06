@@ -20,7 +20,7 @@ $`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times \frac{dA_1}{dW}`$ <br />
 $`\frac{dCost}{dW} = 2 \times (A_1 - \hat{A_1}) \times A_0 \times \sigma ^ \prime{(W^T \times A_0 + B)}`$ <br />
 $`\frac{dCost}{dB} = 2 \times (A_1 - \hat{A_1}) \times \frac{dA_1}{dB}`$ <br />
 $`\frac{dCost}{dB} = 2 \times (A_1 - \hat{A_1}) \times \sigma ^ \prime{(W^T \times A_0 + B)}`$ <br />
-so the update rules would change to $`W^T = W^T + r \times (A_1 - \hat{A_1}) \times A_0`$ and $`B = B + r \times (A_1 - \hat{A_1})`$, <br />
+so the update rules would change to $`W^T = W^T - r \times (A_1 - \hat{A_1}) \times A_0`$ and $`B = B - r \times (A_1 - \hat{A_1})`$, <br />
 notice that like $`{A_1}`$ Cost and $`\hat{A_1}`$ also are $`10 \times 1`$ vectors,
 and all elements of $`\hat{A_1}`$ are zero except the element with label index which is one.
 so we can write the train our model by iterating over training set,
