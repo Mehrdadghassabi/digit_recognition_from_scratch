@@ -8,6 +8,5 @@ but how to find these planes?
 ## problem
 it is a convex quadratic optimization problem
 $$
-\begin{array}{ll}{\underset{\mathbf{w}, b}{\operatorname{minimize}}} & {\frac{1}{2}\|\mathbf{w}\|^{2}}
-\\ {\text { subject to }} & {y_{i}\left(\mathbf{w} \cdot \mathbf{x}_{i}+b\right)-1 \geq 0, i=1, \ldots, m}\end{array}
+minimize \frac{1}{2} \|w\|^{2}
 $$
