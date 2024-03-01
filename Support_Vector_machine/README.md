@@ -9,4 +9,8 @@ but how to find these planes?
 it is a convex quadratic optimization problem
 
 $`minimize \frac{1}{2} \|w\|^{2}`$ <br />
-subjected to $`y_{i}(w x_{i}+b)-1 \geq 0, i=1, \ldots, m`$
+$`s.t.:y_{i}(w x_{i}+b)-1 \geq 0, i=1, \ldots, m`$
+
+after doing some math (which have been explained in the notebook) we would reach to Wolfe dual problem,
+then we use a QP solver to find the answer.
+special thnaks to <a href=https://github.com/Girrajjangid/Machine-Learning-from-Scratch/blob/master/Support%20Vector%20Machine/2.%20SVM%20with%20hard%20margin%20(from%20scratch).ipynb>this</a>.
