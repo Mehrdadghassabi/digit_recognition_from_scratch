@@ -1,10 +1,3 @@
-# handwritten_digit_recognition_from_scratch
-in this repository i tried to solve handwritten digits recognition problem with different nueral network architecture.
-
-- without using common NNs libraries like tensorflow or pytorch just with pure code
-- mnist dataset has been used
-- gradient descent and backpropagation method have been used
-
 ## dumbest network
 probably the dumbest network for such a task is fully connecting the input and the output layer without any hidden layer.<br />
 by flattening the $`28 \times 28`$ grey scale image we would have a $`784 \times 1`$ vector as an input,
