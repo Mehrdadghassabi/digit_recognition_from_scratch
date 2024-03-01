@@ -8,5 +8,5 @@ but how to find these planes?
 ## problem
 it is a convex quadratic optimization problem
 
-$minimize \frac{1}{2} \|w\|^{2}$ <br />
-$subjected to y_{i}(w x_{i}+b)-1 \geq 0, i=1, \ldots, m}$
+$`minimize \frac{1}{2} \|w\|^{2}`$ <br />
+$`subjected to y_{i}(w x_{i}+b)-1 \geq 0, i=1, \ldots, m`$
