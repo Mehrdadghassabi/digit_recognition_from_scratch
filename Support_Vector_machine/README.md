@@ -7,6 +7,4 @@ but how to find these planes?
 
 ## problem
 it is a convex quadratic optimization problem
-$$
-minimize \frac{1}{2} \|w\|^{2}
-$$
+$minimize \frac{1}{2} \|w\|^{2}$
