@@ -1,9 +1,9 @@
-## dumbest network
+# dumbest network
 probably the dumbest network for such a task is fully connecting the input and the output layer without any hidden layer.<br />
 by flattening the $`28 \times 28`$ grey scale image we would have a $`784 \times 1`$ vector as an input,
 so input layer $`A_0`$ would have 784 nodes and the output layer $`A_1`$ would have 10 nodes each one correspond to probablity of being a digit,
 notice that the predicted label would be equal to $`argmax(A_1)`$.<br />
-### training
+## training
 as there is no hidden layer in this network only two vector would determine the predicted label, a $`784 \times 10`$ weight vector(W) and a $`10 \times 1`$ bias vector(B),
 the output would be $`A_1 = \sigma{(W^T \times A_0 + B)}`$ <br />
 according to gradient descent algorithm first of all W and B should be initialized randomly and get updated to minimize the cost function,
@@ -36,13 +36,13 @@ def train(train_X,train_y,WT,B):
             B[j] = B[j] - r * (activation_func_deriv [j]) * (cost[j])
     return WT,B
 ```
-### testing
+## testing
 this model have been tested over 10000 images and it predicted the right label in more than 5000 cases,
 which means accuracy is equal to 80% (not bad for such a network) <br />
 ![Screenshot from 2023-08-08 00-35-01](https://github.com/Mehrdadghassabi/handwritten_digit_recognition_from_scratch/assets/53050138/345c590e-ed1e-4358-becd-d4c8f2b245ed)
 
 
-### Run it yourself
+## Run it yourself
 - run it yourself but note that you might get different accuracy due to local optima problem </br>
 
 
