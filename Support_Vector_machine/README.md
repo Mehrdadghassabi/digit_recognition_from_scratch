@@ -6,11 +6,14 @@ and finaly we choose the most likely one.
 but how to find these planes?
 
 ## problem
-it is a convex quadratic optimization problem
+using support Vector machine approach we should solve the below problem which is a convex quadratic optimization problem
 
 $`minimize \frac{1}{2} \|w\|^{2}`$ <br />
 $`s.t.:y_{i}(w x_{i}+b)-1 \geq 0, i=1, \ldots, m`$
 
-after doing some math (which have been explained in the notebook) we would reach to Wolfe dual problem,
+after doing some math (which have been explained in <a href=https://github.com/Girrajjangid/Machine-Learning-from-Scratch/blob/master/Support%20Vector%20Machine/2.%20SVM%20with%20hard%20margin%20(from%20scratch).ipynb>this</a>.
+notebook) we would reach to Wolfe dual problem,
 then we use a QP solver to find the answer.
+
+## thanks
 special thnaks to <a href=https://github.com/Girrajjangid/Machine-Learning-from-Scratch/blob/master/Support%20Vector%20Machine/2.%20SVM%20with%20hard%20margin%20(from%20scratch).ipynb>this</a>.
